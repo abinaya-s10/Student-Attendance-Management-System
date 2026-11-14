@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Attendance Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+       <div class="top-header">
+    <div>
+        <h1>🎓 Student Attendance System</h1>
+        <p>Welcome to your Dashboard!</p>
+    </div>
+
+    <button id="logoutBtn">Logout</button>
+</div>
+     <div class="container">
+
+    <h2>Student Details</h2>
+
+    <form id="attendanceForm">
+
+        <label>Student Name</label>
+        <input type="text" id="studentName"
+        placeholder="Enter student name" required>
+
+        <label>Register Number</label>
+        <input type="text" id="regNo"
+        placeholder="Enter register number" required>
+
+        <label>Department</label>
+        <select id="department" required>
+            <option value="">Select Department</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Information Technology">IT</option>
+            <option value="Mathematics">Mathematics</option>
+        </select>
+
+        <label>Date</label>
+        <input type="date" id="date" required>
+
+        <button type="submit">Add Student</button>
+
+    </form>
+    <div class="dashboard">
+
+    <div class="card">
+        <h3>Total Students</h3>
+        <p id="totalStudents">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Present</h3>
+        <p id="presentCount">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Absent</h3>
+        <p id="absentCount">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Attendance %</h3>
+        <p id="attendancePercentage">0%</p>
+    </div>
+
+</div>
+    <div class="attendance-alert" id="attendanceAlert">
+    Low Attendance Warning: Below 75%
+</div>
+    <h2>Attendance Records</h2>
+    <input
+    type="text"
+    id="searchInput"
+    placeholder="Search by name or register number">
+<table id="attendanceTable">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Register No</th>
+            <th>Department</th>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+
+    <tbody id="attendanceList">
+    </tbody>
+</table>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
